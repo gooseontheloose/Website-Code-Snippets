@@ -1,0 +1,24 @@
+        <!-- The Modal -->
+        <div id="contactModal" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4 center-horizontal">
+                <header class="w3-container">
+                    <span onclick="closeContactModal()" class="w3-button w3-display-topright">&times;</span>
+                    <h2>Contact Me</h2>
+                </header>
+                <div class="w3-container">
+                    <form id="contactForm">
+                        <label for="firstName">First Name:</label><br>
+                        <input type="text" id="firstName" name="firstName" required><br><br>
+                        <label for="lastName">Last Name:</label><br>
+                        <input type="text" id="lastName" name="lastName" required><br><br>
+                        <label for="phone">Phone:</label><br>
+                        <input type="tel" id="phone" name="phone"><br><br>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                        <input type="submit" onclick="openConfirmationModal(); return false;"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
