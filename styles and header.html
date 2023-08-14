@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif
+        }
+
+        /* CSS for screens with width under 768px */
+
+        @media (max-width: 768px) {
+            .w3-row .w3-col {
+                width: 100%;
+            }
+            .skill-column {
+                margin-bottom: 20px;
+                height: 480px;
+                /* Set the height for screens under 768px */
+                /* Add other styling properties here */
+                overflow: hidden;
+            }
+        }
+
+        /* CSS for screens with width between 768px and 1024px */
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .skill-column {
+                height: 600px;
+                /* Set the height for screens between 768px and 1024px */
+                /* Add other styling properties here */
+            }
+        }
+
+        /* CSS for screens with width over 1024px */
+
+        @media (min-width: 1024px) {
+            .skill-column {
+                height: 500px;
+                /* Set the height for screens over 1024px */
+                /* Add other styling properties here */
+            }
+        }
+
+        /* Flexbox layout for button row */
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        /* Style for all links with the new button design */
+
+        .project-link,
+        .code-link,
+        .w3-tag.company-link {
+            display: inline-block;
+            border-radius: 4px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s, font-size 0.3s;
+        }
+
+        /* Style for all links on hover */
+
+        .project-link:hover,
+        .code-link:hover,
+        .w3-tag.company-link:hover {
+            font-size: 1.05em;
+            background-color: #34495e;
+        }
+
+        /* Style for the active (selected) menu item */
+
+        .active-menu-item {
+            background-color: #596CCE;
+            color: white;
+            /* Remove any margins */
+            padding: 16px 20px;
+            /* Add left padding to match the indented icons */
+            border-left: 6px solid #34495e;
+            display: block;
+            /* Ensure the link takes the entire width */
+        }
+
+        /* Style for hovering on menu items */
+
+        .w3-bar-item.w3-button:hover {
+            background-color: #596CCE;
+            color: white;
+            display: block;
+            /* Ensure the link takes the entire width */
+            transition: background-color 0.4s, padding 0.4s;
+        }
+
+        .center-horizontal {
+            text-align: center;
+        }
+
+        /* Style for the modal background */
+
+        .w3-modal {
+            display: none;
+            position: fixed;
+            z-index: 4;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style for the modal content */
+
+        .w3-modal-content {
+            position: relative;
+            background-color: white;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            /* Adjust the width as needed */
+        }
+
+        /* Style for the close button */
+
+        .w3-display-topright {
+            font-size: 24px;
+            color: #888;
+            cursor: pointer;
+        }
+    </style>
