@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif
+        }
+
+        /* CSS for screens with width under 768px */
+
+        @media (max-width: 768px) {
+            .w3-row .w3-col {
+                width: 100%;
+            }
+
+            .skill-column {
+                margin-bottom: 20px;
+                height: 500px;
+                /* Set the height for screens under 768px */
+                /* Add other styling properties here */
+                overflow: hidden;
+            }
+        }
+
+        /* CSS for screens with width between 768px and 1024px */
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .skill-column {
+                height: 600px;
+                /* Set the height for screens between 768px and 1024px */
+                /* Add other styling properties here */
+            }
+        }
+
+        /* CSS for screens with width over 1024px */
+
+        @media (min-width: 1024px) {
+            .skill-column {
+                height: 500px;
+                /* Set the height for screens over 1024px */
+                /* Add other styling properties here */
+            }
+        }
+
+        .hide-top-container {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .show-top-container {
+            transform: translateY(0);
+            transition: transform 0.3s ease-in-out;
+        }
+</style>
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4; display: flex; justify-content: center;">
+    <a href="#" class="w3-button w3-hover-none w3-text-grey w3-hover-text-white top-nav-link">Home</a>
+    <a href="https://www.rea.media/webdesign/" target="_blank"
+        class="w3-button w3-hover-none w3-text-grey w3-hover-text-white top-nav-link">Portfolio</a>
+    <a href="#"
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/rea-media/strategy-planning-call'});return false;"
+        class="w3-button w3-hover-none w3-text-grey w3-hover-text-white top-nav-link">Hire Me</a>
+</div>
+
+<script>
+            const topContainer = document.querySelector('.w3-bar');
+            let lastScrollPosition = 0; // Store the last scroll position
+
+            function handleScroll() {
+                const currentScrollPosition = window.scrollY;
+
+                if (currentScrollPosition > lastScrollPosition) {
+                    topContainer.classList.add('hide-top-container');
+                    topContainer.classList.remove('show-top-container');
+                } else {
+                    topContainer.classList.remove('hide-top-container');
+                    topContainer.classList.add('show-top-container');
+                }
+
+                // Update the last scroll position
+                lastScrollPosition = currentScrollPosition;
+            }
+
+            window.addEventListener('scroll', handleScroll);
+        </script>
